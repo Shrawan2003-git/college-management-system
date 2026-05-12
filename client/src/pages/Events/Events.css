@@ -1,0 +1,41 @@
+.events-page { padding-bottom: 60px; }
+.filter-group { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.pagination { display: flex; gap: 8px; justify-content: center; margin-top: 40px; }
+.page-btn {
+  width: 40px; height: 40px; border-radius: var(--radius); background: var(--bg-card);
+  border: 1px solid var(--border); color: var(--text-secondary); cursor: pointer; font-weight: 600;
+  transition: var(--transition);
+}
+.page-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+.page-btn:hover:not(.active) { border-color: var(--primary); color: var(--primary-light); }
+
+/* Event Detail */
+.event-detail-grid { display: grid; grid-template-columns: 1fr 360px; gap: 32px; align-items: start; }
+.event-detail-banner { border-radius: var(--radius-lg); overflow: hidden; height: 380px; }
+.event-detail-banner img { width: 100%; height: 100%; object-fit: cover; }
+
+.event-register-card { position: sticky; top: calc(var(--navbar-height) + 24px); }
+.event-fee-display { margin-bottom: 24px; }
+.fee-free-big { font-size: 1.8rem; font-weight: 800; color: var(--success); }
+.fee-paid-big { font-size: 1.8rem; font-weight: 800; color: var(--secondary); }
+.fee-paid-big::before { content: ''; }
+
+.event-info-list { display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px; }
+.event-info-item { display: flex; gap: 12px; align-items: flex-start; }
+.info-icon { color: var(--primary); flex-shrink: 0; margin-top: 2px; }
+.info-label { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 2px; }
+.info-value { font-size: 0.9rem; font-weight: 500; color: var(--text-primary); }
+
+.seats-bar { height: 6px; background: var(--border); border-radius: 3px; margin-bottom: 20px; overflow: hidden; }
+.seats-progress { height: 100%; background: linear-gradient(90deg, var(--primary), var(--secondary)); border-radius: 3px; transition: width 0.5s ease; }
+
+.organizer-info { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); }
+.organizer-label { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 4px; }
+.organizer-name { font-weight: 600; font-size: 0.9rem; }
+.organizer-contact { font-size: 0.82rem; color: var(--text-secondary); margin-top: 2px; }
+
+@media (max-width: 900px) {
+  .event-detail-grid { grid-template-columns: 1fr; }
+  .event-register-card { position: static; }
+}

@@ -1,0 +1,65 @@
+.placement-page { padding-bottom: 60px; }
+.placement-hero { position: relative; text-align: center; padding: 40px 0; margin-bottom: 20px; overflow: visible; }
+
+.company-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.company-card:hover { transform: translateY(-5px); border-color: var(--border-hover); box-shadow: var(--shadow-glow); }
+
+.company-card-header { display: flex; align-items: center; gap: 14px; }
+.company-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius);
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.company-logo img { width: 100%; height: 100%; object-fit: contain; }
+.company-name { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
+.company-desc { font-size: 0.85rem; color: var(--text-secondary); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.5; }
+.company-package { display: flex; align-items: center; gap: 6px; font-weight: 700; color: var(--secondary); font-size: 0.9rem; }
+.company-roles { display: flex; gap: 6px; flex-wrap: wrap; }
+.company-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--border); margin-top: auto; }
+.company-date { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--text-secondary); }
+.company-branches { display: flex; gap: 6px; }
+
+/* Company Detail */
+.company-detail-grid { display: grid; grid-template-columns: 1fr 380px; gap: 32px; align-items: start; }
+.company-detail-header { display: flex; gap: 20px; align-items: flex-start; margin-bottom: 24px; }
+.company-logo-lg {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.company-logo-lg img { width: 100%; height: 100%; object-fit: contain; }
+
+.elig-item { display: flex; align-items: center; gap: 8px; font-size: 0.88rem; color: var(--text-secondary); }
+.elig-item svg { color: var(--success); flex-shrink: 0; }
+
+@media (max-width: 900px) {
+  .company-detail-grid { grid-template-columns: 1fr; }
+}

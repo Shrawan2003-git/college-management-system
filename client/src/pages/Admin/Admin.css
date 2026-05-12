@@ -1,0 +1,9 @@
+.admin-tabs { display: flex; gap: 4px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 6px; margin-bottom: 32px; width: fit-content; }
+.admin-tab { padding: 10px 20px; border-radius: var(--radius); font-size: 0.9rem; font-weight: 500; color: var(--text-secondary); background: transparent; border: none; cursor: pointer; transition: var(--transition); position: relative; display: flex; align-items: center; gap: 8px; }
+.admin-tab.active { background: var(--primary); color: white; }
+.admin-tab:hover:not(.active) { background: var(--bg-glass); color: var(--text-primary); }
+.tab-badge { background: var(--danger); color: white; font-size: 0.7rem; font-weight: 700; padding: 2px 6px; border-radius: var(--radius-full); }
+
+.pending-event-card { cursor: default; }
+.pending-event-info { display: flex; gap: 16px; align-items: flex-start; }
+.pending-banner { width: 100px; height: 70px; object-fit: cover; border-radius: var(--radius); flex-shrink: 0; }
